@@ -10,9 +10,9 @@ import {
 import { Text } from "@/styles/Text";
 import { useEffect, useState } from "react";
 import { FaGithub, FaShare } from "react-icons/fa";
-import { userData } from "@/utils/userData";
+import { FilterRepository, userData } from "@/utils/userData";
 
-interface ReposType {
+export interface ReposType {
   id: number;
   name: string;
   language: string;
@@ -32,9 +32,13 @@ export const Project = (): JSX.Element => {
 
       const json = await data.json();
 
-      setRepositories(json);
+      const excludesId = [551647222,525142399,462526815,591020074]
 
-      return json;
+      const filteredRepository = FilterRepository(excludesId,json)
+
+      setRepositories(filteredRepository);
+
+      return filteredRepository;
     };
 
     fetchData();
