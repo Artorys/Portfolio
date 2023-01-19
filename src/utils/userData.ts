@@ -3,7 +3,7 @@ import { ReposType } from "@/components/Project";
 export const userData = {
   nameUser: "Guilherme Teles",
   githubUser: "Artorys",
-  linkedinUser: "Guilherme Teles",
+  linkedinUser: "guilherme-teles-alves",
   whatsappNumber: "+5527998510568",
   emailUser: "guilhermetelesdev@gmail.com",
   instagramUser: "",
